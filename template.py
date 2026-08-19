@@ -16,6 +16,8 @@ list_of_files = [
     f"src/{project_name}/components/model_evaluation.py",
     f"src/{project_name}/utils/__init__.py",
     f"src/{project_name}/utils/common.py",
+    f"src/{project_name}/utils/custom_exceptions.py",
+    f"src/{project_name}/utils/logger.py",
     f"src/{project_name}/config/__init__.py",
     f"src/{project_name}/config/configuration.py",
     f"src/{project_name}/pipeline/stage_01_data_ingestion.py",
