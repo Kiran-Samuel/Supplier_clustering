@@ -1,0 +1,35 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+ipykernel
+
+# Configuration
+python-box==6.0.2
+PyYAML
+types-PyYAML
+
+# Utilities
+tqdm
+ensure==1.0.2
+joblib
+
+# Experiment tracking
+mlflow
+
+# Data versioning
+dvc[s3]
+
+# AWS
+boto3
+
+# API
+fastapi
+uvicorn
+
+# DagsHub
+dagshub
+
+# Local package
+-e .
