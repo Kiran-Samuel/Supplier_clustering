@@ -1,1 +1,17 @@
-key: val
+COLUMNS:
+  po_id: int64
+  order_date: object
+  promised_delivery_date: object
+  actual_delivery_date: object
+  supplier_id: int64
+  supplier_name: object
+  supplier_country: object
+  category: object
+  item: object
+  business_unit: object
+  unit_price: float64
+  quantity: int64
+  line_total: float64
+  payment_terms: object
+  on_contract: bool
+  quality_rejected: bool
