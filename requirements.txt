@@ -19,7 +19,8 @@ joblib
 mlflow
 
 # Data versioning
-dvc[s3]
+dvc
+#dvc[s3]
 
 # AWS
 boto3
