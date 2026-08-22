@@ -1,9 +1,9 @@
 COLUMNS:
-  po_id: int64
+  po_id: object
   order_date: object
   promised_delivery_date: object
   actual_delivery_date: object
-  supplier_id: int64
+  supplier_id: object
   supplier_name: object
   supplier_country: object
   category: object
