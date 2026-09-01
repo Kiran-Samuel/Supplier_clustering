@@ -15,3 +15,7 @@ data_validation:
 feature_engineering:
   root_dir: artifacts/feature_engineering
   data_path: artifacts/data_ingestion/purchase_orders.csv
+
+feature_selection:
+  root_dir: artifacts/feature_selection
+  input_data_path: artifacts/feature_engineering/engineered_data.csv
