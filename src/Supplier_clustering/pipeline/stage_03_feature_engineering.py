@@ -1,28 +1,28 @@
 from Supplier_clustering.config.configuration import ConfigurationManager
-from Supplier_clustering.components.data_ingestion import DataIngestion
+from Supplier_clustering.components.feature_engineering import FeatureEngineering
 from Supplier_clustering.utils.logger import logger
 
 
-STAGE_NAME = "Data Ingestion Stage"
+STAGE_NAME = "Feature Engineering stage"
 
-class DataIngestionTrainingPipeline:
+class FeatureEngineeringPipeline:
     def __init__(self):
         pass
 
     def main(self):
         config = ConfigurationManager()
-        data_ingestion_config = config.get_data_ingestion_config()
-        data_ingestion = DataIngestion(config=data_ingestion_config)
-        data_ingestion.download_file()
-        data_ingestion.extract_zip_file()
+        feature_engineering_config = config.get_feature_engineering_config()
+        feature_engineering = FeatureEngineering(config=feature_engineering_config)
+        feature_engineering.engineer_features()
+
+
 
 if __name__ == '__main__':
     try:
         logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
-        obj = DataIngestionTrainingPipeline()
+        obj = FeatureEngineeringPipeline()
         obj.main()
         logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)
         raise e
-

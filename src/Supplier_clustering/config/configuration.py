@@ -1,6 +1,6 @@
 from src.Supplier_clustering.constants import *
 from src.Supplier_clustering.utils.common import read_yaml, create_directories
-from src.Supplier_clustering.entity.config_entity import (DataIngestionConfig, DataValidationConfig)
+from src.Supplier_clustering.entity.config_entity import (DataIngestionConfig, DataValidationConfig, FeatureEngineeringConfig)
 
 class ConfigurationManager:
     def __init__(
@@ -43,4 +43,17 @@ class ConfigurationManager:
             )
     
             return data_validation_config
+
+    def get_feature_engineering_config(self) -> FeatureEngineeringConfig:
+            config = self.config.feature_engineering
+    
+            create_directories([config.root_dir])
+    
+            feature_engineering_config = FeatureEngineeringConfig(
+                root_dir=config.root_dir,
+                data_path=config.data_path
+    
+            )
+    
+            return feature_engineering_config
     
