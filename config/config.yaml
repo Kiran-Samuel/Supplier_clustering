@@ -19,3 +19,8 @@ feature_engineering:
 feature_selection:
   root_dir: artifacts/feature_selection
   input_data_path: artifacts/feature_engineering/engineered_data.csv
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  input_data_path: artifacts/feature_selection/selected_features.csv
+

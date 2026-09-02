@@ -4,6 +4,7 @@ from Supplier_clustering.pipeline.stage_01_data_ingestion import DataIngestionTr
 from Supplier_clustering.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from Supplier_clustering.pipeline.stage_03_feature_engineering  import FeatureEngineeringPipeline
 from Supplier_clustering.pipeline.stage_04_feature_selection  import FeatureSelectionPipeline
+from Supplier_clustering.pipeline.stage_05_data_transformation  import DataTransformationPipeline
 
 STAGE_NAME = "Data Ingestion stage"
 try:
@@ -43,6 +44,18 @@ try:
         
     logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
     obj = FeatureSelectionPipeline()
+    obj.main()
+    logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+STAGE_NAME = "Data Transformation stage"
+
+try:
+        
+    logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
+    obj = DataTransformationPipeline()
     obj.main()
     logger.info(f">>>>>> {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:

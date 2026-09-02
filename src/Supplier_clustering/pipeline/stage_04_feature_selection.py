@@ -22,7 +22,13 @@ class FeatureSelectionPipeline:
         feature_selection.initiate_feature_selection()
 
 
-if __name__ == '__main__':
+
+#But if another file does:
+
+#from feature_selection import FeatureSelectionPipeline
+
+#the pipeline doesn't run immediately. It only imports the class.
+if __name__ == '__main__':  # "Start executing this file from here if I personally ran this file."
     try:
         logger.info(f">>>>>> {STAGE_NAME} started <<<<<<")
         obj = FeatureSelectionPipeline()

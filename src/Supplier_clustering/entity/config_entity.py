@@ -27,3 +27,9 @@ class FeatureSelectionConfig:
     # These values are set in the config.yaml file and passed to the FeatureSelectionConfig class
     root_dir: Path  # where the selected features will be saved
     input_data_path: Path  # where the input data for feature selection is located
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    # These values are set in the config.yaml file and passed to the DataTransformationConfig class
+    root_dir: Path  # where the transformed data will be saved
+    input_data_path: Path  # where the input data for transformation is located
